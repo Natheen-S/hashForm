@@ -1,0 +1,88 @@
+﻿<Window x:Class="hashForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hashForm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="370" Width="500" Background="Transparent"
+        AllowsTransparency="True" WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown" MouseDoubleClick="Window_MouseDoubleClick" 
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border CornerRadius="30,30,30,30" Background="#1E817F" Grid.Column="0" Grid.ColumnSpan="2" Margin="2,0,-2,0">
+            <StackPanel>
+                <Label Content="College Admission" HorizontalAlignment="Center" FontSize="15"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Label Content="Student name" FontSize="13" Margin="0,0,0,0"/>
+                    <TextBox x:Name="txtbox_name" Width="150" Background="Transparent" BorderThickness="1"
+                             BorderBrush="Black" Margin="40,0,0,0">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Label Content="College name" FontSize="13" Margin="0,0,0,0"/>
+                    <TextBox x:Name="txtbox_clg" Width="150" Background="Transparent" BorderThickness="1"
+                             BorderBrush="Black" Margin="30,0,0,0">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Label Content="Mark 1" FontSize="13" Margin="0,0,0,0"/>
+                    <TextBox x:Name="txtbox_mark1" Width="150" Background="Transparent" BorderThickness="1"
+                             BorderBrush="Black" Margin="30,0,0,0">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Label Content="Mark 2" FontSize="13" Margin="0,0,0,0"/>
+                    <TextBox x:Name="txtbox_mark2" Width="150" Background="Transparent" BorderThickness="1"
+                             BorderBrush="Black" Margin="15,0,0,0" TextChanged="txtbox_mark2_TextChanged">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <Label Content="Total" FontSize="13" Margin="130,0,0,0"/>
+
+                    <TextBox x:Name="txtbox_total" Width="150" Background="Transparent" BorderThickness="1"
+                             BorderBrush="Black" Margin="55,0,0,0" Height="25" IsReadOnly="True">
+                        <TextBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </TextBox.Resources>
+                    </TextBox>
+                </StackPanel>
+                
+                <Button x:Name="btn_main" Content="Submit" HorizontalAlignment="Center" Width="50" Height="25"
+                        Margin="0,20,0,0" Background="Transparent" BorderBrush="Black" Click="btn_main_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
